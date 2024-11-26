@@ -8,12 +8,12 @@
 #define __FI_LARGE 1
 #define __FI_SMALL 0
 
-extern void Delay (unint32_t);
+extern void Delay (uint32_t);
 
 // Functions
 int funcBlackjack (void);
 void menuBlackjack (void);
-int selectionManagerBlackjack();
+int selectionManagerBlackjack (void);
 int startGame (void);
 void playerTurn (void);
 void dealerTurn (void);
@@ -108,7 +108,10 @@ void dealerTurn (void) {
 }
 
 int drawCard (void) {
+
+  // Ace Soft Hand Condition
   // TODO
+  
   return (rand() & 10) + 1;
 }
 
